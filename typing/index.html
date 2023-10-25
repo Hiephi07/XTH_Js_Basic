@@ -1,53 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Typing</title>
+    <title>Typing Master</title>
 </head>
-
 <body>
     <div class="container">
         <header class="header">
-            <h1>Typing Master</h1>
+            <div class="nameGame">Typing Master</div>
         </header>
+        
 
         <main class="main">
-            <div class="row">
-                <div class="levels">
-                    Cấp độ
-                    <select class="level">
-                        <option value="0">Dễ</option>
-                        <option value="1">Trung bình</option>
-                        <option value="2">Khó</option>
-                    </select>
-                </div>
-
-                <p class="huongDan">Gõ từ xuất hiện bên dưới trong vòng <span class="seconds">5</span> giây</p>
-
-                <h2 class="display"></h2>
-
-                <input type="text" class="input" placeholder="Bắt đầu nhập ..." autofocus>
-
-                <h4 class="statusGame"></h4>
-
-                <div class="menu">
-                    <div class="menu-item">
-                        <h3>Time Left: <span class="timeLeft">15</span> </h3>
+            <div class="main-screen">
+                <div class="screen-game">
+                    <div class="levels">
+                        <span>Cấp độ</span>
+                        <select name="chooseLevel" id="chooseLevel">
+                            <option value="easy">Dễ</option>
+                            <option value="medium">Trung bình</option>
+                            <option value="difficult">Khó</option>
+                        </select>
                     </div>
 
-                    <div class="menu-item">
-                        <h3>Point: <span class="point">0</span> </h3>
+                    <div class="timeLeft-score">
+                        <div class="time">Time Left: <span class="timeLeft">20</span> s</div>
+                        <div class="score">Score: <span class="scorePlusPlus">0</span></div>
+                    </div>
+
+                    <div class="title-word">Gõ từ xuất hiện bên dưới: </div>
+
+                    <div class="displayWord"></div>
+                    <!-- <div class="displayWord">Javascript</div> -->
+
+                    <div class="inputWord">
+                        <input type="text"id="inputLetters" >
+                    </div>
+
+
+                </div>
+
+                <div class="keyborad">
+                    <div class="keyLine row1">
+                        <div class=""></div>
+                        <div class="key keyColor" data-key="q">
+                            <span>q</span>
+                        </div>
+                        <div class="key" data-key="w">
+                            <span>w</span>
+                        </div>
+                        <div class="key" data-key="e">
+                            <span>e</span>
+                        </div>
+                        <div class="key" data-key="r">
+                            <span>r</span>
+                        </div>
+                        <div class="key" data-key="t">
+                            <span>t</span>
+                        </div>
+                        <div class="key" data-key="y">
+                            <span>y</span>
+                        </div>
+                        <div class="key" data-key="u">
+                            <span>u</span>
+                        </div>
+                        <div class="key" data-key="i">
+                            <span>i</span>
+                        </div>
+                        <div class="key" data-key="o">
+                            <span>o</span>
+                        </div>
+                        <div class="key" data-key="p">
+                            <span>p</span>
+                        </div>
+                        <div class="key" data-key="[">
+                            <span>[</span>
+                        </div>
+                        <div class="key" data-key="]">
+                            <span>]</span>
+                        </div>
+                        <div class=""></div>
+                    </div>
+
+                    <div class="keyLine row2">
+                        <div class=""></div>
+                        <div class="key" data-key="a">
+                            <span>a</span>
+                        </div>
+                        <div class="key" data-key="s">
+                            <span>s</span>
+                        </div>
+                        <div class="key" data-key="d">
+                            <span>d</span>
+                        </div>
+                        <div class="key" data-key="f">
+                            <span>f</span>
+                        </div>
+                        <div class="key" data-key="g">
+                            <span>g</span>
+                        </div>
+                        <div class="key" data-key="h">
+                            <span>h</span>
+                        </div>
+                        <div class="key" data-key="j">
+                            <span>j</span>
+                        </div>
+                        <div class="key" data-key="k">
+                            <span>k</span>
+                        </div>
+                        <div class="key" data-key="l">
+                            <span>l</span>
+                        </div>
+                        <div class="key" data-key=";">
+                            <span>;</span>
+                        </div>
+                        <div class="key" data-key="'">
+                            <span>'</span>
+                        </div>
+                        <div class=""></div>
+                    </div>
+
+                    <div class="keyLine row3">
+                        <div class=""></div>
+                        <div class="key" data-key="z">
+                            <span>z</span>
+                        </div>
+                        <div class="key" data-key="x">
+                            <span>x</span>
+                        </div>
+                        <div class="key" data-key="c">
+                            <span>c</span>
+                        </div>
+                        <div class="key" data-key="v">
+                            <span>v</span>
+                        </div>
+                        <div class="key" data-key="b">
+                            <span>b</span>
+                        </div>
+                        <div class="key" data-key="n">
+                            <span>n</span>
+                        </div>
+                        <div class="key" data-key="m">
+                            <span>m</span>
+                        </div>
+                        <div class="key" data-key=",">
+                            <span>,</span>
+                        </div>
+                        <div class="key" data-key=".">
+                            <span>.</span>
+                        </div>
+                        <div class="key" data-key="/">
+                            <span>/</span>
+                        </div>
+
+                        <div class=""></div>
+                    </div>
+
+                    <div class="keyLine row4">
+                        <div class=""></div>
+                        <div class="key keySpace " data-key=" ">
+                            <span>space</span>
+                        </div>
+                        <div class=""></div>
                     </div>
                 </div>
+
             </div>
-
         </main>
-
     </div>
 
+    <script src="./main.js"></script>
 </body>
-
 </html>

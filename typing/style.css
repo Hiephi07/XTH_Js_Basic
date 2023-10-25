@@ -1,65 +1,158 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Segoe UI","Roboto","Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-}
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&display=swap');
 
-.container{
-    background-color: #212529;
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Inter";
     color: white;
 }
 
+.container{
+    background-color: #323437;
+    height: 100vh;
+}
+
+/* HEADER */
 .header{
+    width: 100%;
+    height: 80px;
+    background-color: #6C757D;
     text-align: center;
-    background-color: #6c757d;
-    margin-bottom: 48px;
 }
 
-.header > h1{
-    padding: 16px;
+.nameGame{
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 80px;
 }
+/* HEADER */
 
+/* MAIN */
+
+/* screen-game */
 .main{
-    max-width: 1140px;
-    height: 600px;
+    margin: 80px auto;
+}
+
+.main-screen{
     text-align: center;
+    max-width: 540px;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.row{
-    max-width: 50%;
-    margin: 0 auto;
+.screen-game{
+    background-color: #404F5E;
+    border: 1px solid black;
+    border-radius: 32px 32px 8px 8px;
+    padding: 24px;
 }
 
-.row > .levels, p{
-    padding-bottom: 16px;
-    font-weight: 300;
-    font-size: 20px;
+.levels{
+    background-color: #D9D9D9;
+    border-radius: 0.75rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.row > h2{
-    padding-bottom: 48px;
-    font-weight: 700;
-    font-size: 32px;
-    line-height: 1.2;
+.levels > select:hover{
+    cursor: pointer;
 }
 
-.row .input{
-    height: 48px;
+.levels > span, .levels > select, option{
+    color: black;
+    padding: 0 0.25rem;
+}
+
+.timeLeft-score{
+    display: flex;
+    justify-content: space-between;
+}
+
+.displayWord{
+    font-size: 1.25rem;
+    color: yellowgreen;
+}
+
+.levels , .timeLeft-score, .title-word, .displayWord {
+    margin-bottom: .75rem;
+}
+
+.inputWord > input{
+    height: 2.75rem;
     padding: 8px 16px;
     font-size: 20px;
-    line-height: 30;
-    border-radius: 4.8px;
+    line-height: 30px;
+    border-radius: 6px;
     width: 480px;
+    color: black;
 }
 
-.row > .statusGame{
-    margin-top: 16px;
+/* screen-game */
+
+
+/* keyborad */
+
+.keyborad{
+    display: grid;
+    gap: 4px;
+    margin-top: 2rem;
+    max-width: 468px;
+}
+.keyborad .row1{
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 0.5fr;
+    gap: .25rem;
 }
 
-.row > .menu{
+.keyborad .row2{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: .25rem;
+}
+
+.keyborad .row3{
+    display: grid;
+    grid-template-columns: 2fr repeat(10, 1fr) 2.5fr;
+    gap: .25rem;
+}
+
+.keyborad .row4{
+    display: grid;
+    grid-template-columns: 7.75rem auto 8.25rem ;
+    /* gap: .25rem; */
+}
+
+
+.keyborad .keyLine .key{
+    align-items: center;
+    background-color: #2C2E31;
+    border-radius: .5rem;
+    color: #646669;
     display: flex;
-    justify-content: space-around;
-    margin-top: 48px;
+    height: 2rem;
+    justify-content: center;
+    text-align: center;
+    width: 2rem;
+    transition: all 0.125s ease;
 }
+
+.keyborad .keyLine .keySpace{
+    width: 100%;
+}
+
+.keyborad .keyLine .key span{
+    font-family: 'Roboto Mono', monospace;
+}
+
+
+/* keyborad */
+
+/* MAIN */
+
