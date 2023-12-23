@@ -47,10 +47,9 @@ function timeGame(){
     --time;
     timeLeft.innerHTML = time;
     
-    if(time === 0){
+    if(time <= -1){
         clearInterval(timeDown);
     }
-
 }
 
 inputLetters.addEventListener("focus", ()=>{
@@ -63,7 +62,9 @@ inputLetters.addEventListener("input", ()=>{
         inputLetters.value = "";
         scorePlus();
         displayChater();
+        console.log(time);
         time += timePlus;
+        console.log(time);
         timeGame();
     }
 })
